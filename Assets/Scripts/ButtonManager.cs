@@ -14,7 +14,7 @@ public class ButtonManager : MonoBehaviour
     public int CurrentMultiplier = 1;
 
 
-    //
+    // Start is called before the first update
     void Start()
     {
         CUpdate = FindObjectOfType<CountUpdate>();
@@ -24,7 +24,7 @@ public class ButtonManager : MonoBehaviour
     }
     
 
-    //
+    // Update is called once per frame
     private void Update()
     {
         if (CUpdate.Count >= CurrentMultiplier * CurrentMultiplier * 5)
@@ -41,7 +41,7 @@ public class ButtonManager : MonoBehaviour
     }
 
 
-    //
+    // Upgrade of each click
     public void ClickUpgrade()
     {
         if (CUpdate.Count >= CurrentMultiplier * CurrentMultiplier * 5)
@@ -56,7 +56,7 @@ public class ButtonManager : MonoBehaviour
     }
 
 
-    //
+    // Upgrade of the autoclick
     public void AutoclickUpgrade()
     {
         if (CUpdate.Count > AutoclickMultiplier * AutoclickMultiplier * 6 || CUpdate.Count == 6)
